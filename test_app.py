@@ -6,3 +6,10 @@ def test_index():
     resp = client.get("/")
     assert resp.status_code == 200
     assert resp.data == b"hello"
+
+
+def test_ping():
+    client = app.test_client()
+    resp = client.get("/ping")
+    assert resp.status_code == 200
+    assert resp.data == b"pong"
