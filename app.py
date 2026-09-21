@@ -8,5 +8,10 @@ def index():
     return "hello"
 
 
+@app.route("/ping")
+def ping():
+    return "pong"
+
+
 if __name__ == "__main__":
     app.run()
